@@ -1,0 +1,96 @@
+.exam_item {
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 270px;
+  transition: 0.5s ease-out;
+
+  &:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+.exam_item-wrapper {
+  width: 270px;
+}
+
+.exam_item-img {
+  padding-top: 64.5%;
+  background-image: url("../../../src/assets/images/online_exam-01\ 1.png");
+}
+
+.exam_item-content {
+  padding: 16px 12px;
+}
+
+.exam_item-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+  color: #333333;
+}
+
+.exam_item-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .exam_item-name {
+    font-weight: 400;
+    line-height: 24px;
+    color: #666666;
+    display: flex;
+
+    & span:nth-child(1) {
+      font-size: 16px;
+      min-width: 102px;
+    }
+
+    & span:nth-child(2) {
+      font-size: 14px;
+      min-width: 135px;
+    }
+  }
+}
+
+.john_exam {
+  width: 100%;
+  background-color: #0084ee;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px 0;
+
+  & > a {
+    display: block;
+    padding: 8px 0;
+  }
+
+  &:not(.disabled):hover {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(30, 144, 255, 1) 0%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+
+  &:not(.disabled):active {
+    transform: translate(0, 1px);
+  }
+}
+
+.john_exam.disabled {
+  background-color: #666666;
+}

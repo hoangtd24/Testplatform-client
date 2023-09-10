@@ -1,0 +1,83 @@
+.footer_wrapper {
+  background-color: #000000;
+  overflow: hidden;
+  padding: 64px 180px;
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.footer_left {
+  max-width: 500px;
+}
+
+.footer_left-heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.footer_left-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer_left-item {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.footer_right {
+  margin-top: auto;
+}
+.footer_contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer_contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+.footer_contact-icon {
+  display: flex;
+}
+.footer_contact-name {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  transform: translateY(-3px);
+  font-family: "Inter", sans-serif;
+}
+
+.footer_via-list {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 1200px) {
+  .footer_wrapper {
+    background-color: #000000;
+    overflow: hidden;
+    padding: 64px 96px;
+  }
+}

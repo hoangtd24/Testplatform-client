@@ -1,0 +1,88 @@
+.wrapper {
+  width: 565px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  padding: 34px 36px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+  }
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+.form-item {
+  display: flex;
+  align-items: center;
+}
+
+.form-item-label {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 136px;
+
+  & span {
+    line-height: 30px;
+    color: #999999;
+  }
+
+  & p {
+    color: #ff0000;
+  }
+}
+
+.form-item-input {
+  flex: 1;
+
+  & input {
+    width: 100%;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid #c9c8c8;
+    box-shadow: 2px 2px 20px rgba(94, 94, 94, 0.1);
+    border-radius: 5px;
+    outline: none;
+    line-height: 24px;
+  }
+
+  & input:focus {
+    border-color: rgba(167, 139, 250);
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  & input {
+    width: 75px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    padding: 8px 0;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  & input:nth-child(1) {
+    border: 1px solid #d9d9d9;
+  }
+
+  & input:nth-child(2) {
+    color: #ffffff;
+    background-color: #0082ed;
+  }
+}
