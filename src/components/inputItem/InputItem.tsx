@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
+import { UseFormRegister } from "react-hook-form";
 import styles from "./InputItem.module.scss";
-import { FieldValue, FieldValues, UseFormRegister } from "react-hook-form";
 
 const cx = classNames.bind(styles);
 

@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
+import { useLazyQuery } from "@apollo/client";
 import {
   ReactNode,
   createContext,
   useContext,
-  useEffect,
   useLayoutEffect,
-  useState,
+  useState
 } from "react";
-import { User } from "../types/User";
-import { useLazyQuery, useQuery } from "@apollo/client";
 import { LOAD_USER } from "../graphql/query/User";
+import { User } from "../types/User";
 
 interface IAuthContext {
   isAuthenticated: boolean;

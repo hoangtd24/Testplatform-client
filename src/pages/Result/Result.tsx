@@ -1,14 +1,13 @@
-import classNames from "classnames/bind";
-import { useForm } from "react-hook-form";
-import QuestionItem from "../../components/questionItem/QuestionItem";
-import styles from "./Result.module.scss";
-import { questions, results } from "../../data";
-import { useState } from "react";
-import ModalCustom from "../../components/modalCustom/ModalCustom";
-import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
+import classNames from "classnames/bind";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
+import ModalCustom from "../../components/modalCustom/ModalCustom";
+import QuestionItem from "../../components/questionItem/QuestionItem";
 import { GET_ONE_RESULT } from "../../graphql/query/Result";
 import { Question } from "../../types/Question";
+import styles from "./Result.module.scss";
 export interface UserOption {
   id: string;
   options: string[];
@@ -18,14 +17,9 @@ const cx = classNames.bind(styles);
 function Exam() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const {
-    register,
-    handleSubmit,
-    setError,
-    formState: { errors },
-  } = useForm();
+  const { register } = useForm();
 
-  const { data, loading } = useQuery(GET_ONE_RESULT, {
+  const { data } = useQuery(GET_ONE_RESULT, {
     variables: { resultId: Number(id) },
   });
   console.log(data);

@@ -1,13 +1,13 @@
-import classNames from "classnames/bind";
-import styles from "./ExamItem.module.scss";
-import { Link, useNavigate } from "react-router-dom";
-import { Exam } from "../../types/Exam";
 import {
   ApolloCache,
   DefaultContext,
   MutationFunctionOptions,
   OperationVariables,
 } from "@apollo/client";
+import classNames from "classnames/bind";
+import { useNavigate } from "react-router-dom";
+import { Exam } from "../../types/Exam";
+import styles from "./ExamItem.module.scss";
 
 const cx = classNames.bind(styles);
 

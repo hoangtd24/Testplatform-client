@@ -9,7 +9,7 @@ import styles from "./Home.module.scss";
 
 const cx = classNames.bind(styles);
 function Home() {
-  const { data, loading, fetchMore } = useQuery(GET_EXAMS, {
+  const { data, fetchMore } = useQuery(GET_EXAMS, {
     variables: {
       limit: 4,
     },

@@ -24,15 +24,13 @@ function Exam() {
     register,
     handleSubmit,
     watch,
-    setError,
-    formState: { errors },
   } = useForm();
   const { id } = useParams();
 
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   //get questions from exam
-  const { data, loading } = useQuery(GET_RESULT, {
+  const { data } = useQuery(GET_RESULT, {
     variables: { examId: Number(id) },
   });
 

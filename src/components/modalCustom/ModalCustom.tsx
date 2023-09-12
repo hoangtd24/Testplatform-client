@@ -1,6 +1,6 @@
+import { Box, Button, Modal } from "@mui/material";
 import classNames from "classnames/bind";
 import styles from "./ModalCustom.module.scss";
-import { Box, Button, Modal, Stack } from "@mui/material";
 
 const cx = classNames.bind(styles);
 

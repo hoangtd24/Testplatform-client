@@ -10,7 +10,7 @@ import { onError } from "@apollo/client/link/error";
 import axios from "axios";
 
 const httpLink = createHttpLink({
-  uri: "https://testplatform-server.onrender.com",
+  uri: "https://testplatform-server.onrender.com/graphql",
   credentials: "include",
 });
 
@@ -28,9 +28,12 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 });
 
 const GetNewAccessToken = async () => {
-  const res = await axios.get("https://testplatform-server.onrender.com/refresh_token", {
-    withCredentials: true,
-  });
+  const res = await axios.get(
+    "https://testplatform-server.onrender.com/refresh_token",
+    {
+      withCredentials: true,
+    }
+  );
   console.log(res);
   if (res.data && res.data.code === 403) {
     localStorage.removeItem("token");
@@ -45,7 +48,7 @@ export const logoutLink = onError(({ graphQLErrors, operation, forward }) => {
     graphQLErrors &&
     graphQLErrors[0]?.extensions?.code === "UNAUTHENTICATED"
   ) {
-    console.log(graphQLErrors)
+    console.log(graphQLErrors);
     return new Observable((observer) => {
       (async () => {
         try {

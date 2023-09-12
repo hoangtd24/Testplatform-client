@@ -1,29 +1,16 @@
+import { useMutation } from "@apollo/client";
+import { Alert, CircularProgress, Modal, Snackbar } from "@mui/material";
 import classNames from "classnames/bind";
 import { SubmitHandler, useForm } from "react-hook-form";
-import styles from "./Register.module.scss";
-import {
-  Alert,
-  Button,
-  CircularProgress,
-  Modal,
-  Snackbar,
-} from "@mui/material";
-import { useMutation } from "@apollo/client";
-import { REGISTER_USER } from "../../graphql/mutation/User";
-import { useNavigate } from "react-router-dom";
 import InputItem, { FormValues } from "../../components/inputItem/InputItem";
+import { REGISTER_USER } from "../../graphql/mutation/User";
+import styles from "./Register.module.scss";
 
 const cx = classNames.bind(styles);
 
 const Register = () => {
-  const {
-    register,
-    handleSubmit,
-    setError,
-    formState: { errors },
-  } = useForm<FormValues>();
+  const { register, handleSubmit } = useForm<FormValues>();
   const [registerUser, { data, loading }] = useMutation(REGISTER_USER);
-  const navigate = useNavigate();
   console.log(data);
   if (data && data.register?.success) {
     return (
@@ -45,6 +32,7 @@ const Register = () => {
     // if (response.data?.register?.code === 201) {
     //   navigate("/login");
     // }
+    console.log(response);
   };
   return (
     <div className={cx("wrapper")}>

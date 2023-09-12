@@ -5,16 +5,16 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/UserContext";
 import { LOGOUT_USER } from "../../graphql/mutation/User";
+import { LOAD_USER } from "../../graphql/query/User";
 import { Logo, Search } from "../icons/Icon";
 import styles from "./Header.module.scss";
-import { LOAD_USER } from "../../graphql/query/User";
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
   //user context
   const { logoutClient } = useAuth();
-  const { data, loading } = useQuery(LOAD_USER);
+  const { data } = useQuery(LOAD_USER);
 
   //state
   const [showMenu, setShowMenu] = useState<boolean>(false);

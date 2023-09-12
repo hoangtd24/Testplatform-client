@@ -1,5 +1,3 @@
-import axios from "axios";
-
 const JwtManager = () => {
   let inMemoryToken: string | null = null;
 

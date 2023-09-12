@@ -1,18 +1,18 @@
-import classNames from "classnames/bind";
-import { useRef, useState, useEffect } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
+import { Button } from "@mui/material";
+import classNames from "classnames/bind";
+import { useEffect, useRef, useState } from "react";
 import ReactCrop, {
   Crop,
   PixelCrop,
   centerCrop,
   makeAspectCrop,
 } from "react-image-crop";
-import styles from "./UpdateAvatar.module.scss";
 import "react-image-crop/dist/ReactCrop.css";
 import { canvasPreview } from "../../utils/canvasPreview";
-import { Button } from "@mui/material";
+import styles from "./UpdateAvatar.module.scss";
 
 const cx = classNames.bind(styles);
 
@@ -35,6 +35,7 @@ function UpdateProfile(props: Props) {
   const previewCanvasRef = useRef<HTMLCanvasElement>(null);
   const blobUrlRef = useRef(""); // get blob to send to server
 
+  console.log(setRotate, setAspect);
   useEffect(() => {
     const handleCanvas = async () => {
       if (

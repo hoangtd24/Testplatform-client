@@ -19,7 +19,7 @@ export interface Result {
 type dataState = dataTable<Result[]>;
 
 const SeeResult = () => {
-  const { data, loading } = useQuery(GET_RESULTS_OF_USER);
+  const { data } = useQuery(GET_RESULTS_OF_USER);
   const results: dataState = {
     header: [
       {

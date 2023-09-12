@@ -8,7 +8,7 @@ import { GET_ONE_RESULT } from "../../graphql/query/Result";
 const cx = classNames.bind(styles);
 function Score() {
   const { id } = useParams();
-  const { data, loading } = useQuery(GET_ONE_RESULT, {
+  const { data } = useQuery(GET_ONE_RESULT, {
     variables: { resultId: Number(id) },
   });
 
